@@ -1,5 +1,5 @@
 //
-//  TodaySchoolMeal.swift
+//  Delivery.swift
 //  inpostack
 //
 //  Created by 조승혁 on 2018. 4. 21..
@@ -8,15 +8,25 @@
 
 import UIKit
 
-class TodaySchoolMeal {
-    var MorningA : SchoolMeal!
-    var MorningB : SchoolMeal!
-    var Lunch : SchoolMeal!
-    var Dinner : SchoolMeal!
+class Delivery {
+    var Id : Int!
+    var Name : String!
+    var Open : String!
+    var Close : String!
+    var Location : String!
+    var Contact : String!
+    var Menu : NSArray!
     
-    init(){
+    init(input : [String:AnyObject]){
+        Id = input[Constants.Delivery.id] as! Int
+        Name = input[Constants.Delivery.name] as! String
+        Open = input[Constants.Delivery.open] as! String
+        Close = input[Constants.Delivery.close] as! String
+        Location = input[Constants.Delivery.location] as! String
+        Contact = input[Constants.Delivery.contact] as! String
+        
         let session = URLSession.shared
-        let sendURL = Constants.Basic.APIBaseURL + Constants.Schoolmeal.Today
+        let sendURL = Constants.Basic.APIBaseURL + Constants.Delivery.Path + String(Id) + Constants.Delivery.Menus
         let url = URL(string : sendURL)!
         let request = URLRequest(url : url)
         
@@ -55,14 +65,10 @@ class TodaySchoolMeal {
                 return
             }
             
-            performUIUpdatesOnMain {
-                self.MorningA = SchoolMeal(input : parsedResult[0] as! [String:AnyObject])
-                self.MorningB = SchoolMeal(input : parsedResult[1] as! [String:AnyObject])
-                self.Lunch = SchoolMeal(input : parsedResult[2] as! [String:AnyObject])
-                self.Dinner = SchoolMeal(input : parsedResult[3] as! [String:AnyObject])
-            }
-            
             print(parsedResult)
+            performUIUpdatesOnMain {
+                self.Menu = parsedResult
+            }
         }
         
         // start the task!

@@ -1,5 +1,5 @@
 //
-//  TodaySchoolMeal.swift
+//  AllDelivery.swift
 //  inpostack
 //
 //  Created by 조승혁 on 2018. 4. 21..
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class TodaySchoolMeal {
-    var MorningA : SchoolMeal!
-    var MorningB : SchoolMeal!
-    var Lunch : SchoolMeal!
-    var Dinner : SchoolMeal!
+class AllDelivery {
+    var deliveries : Array<Delivery>
     
     init(){
+        deliveries = Array<Delivery>()
+        
         let session = URLSession.shared
-        let sendURL = Constants.Basic.APIBaseURL + Constants.Schoolmeal.Today
+        let sendURL = Constants.Basic.APIBaseURL + Constants.Delivery.Path
         let url = URL(string : sendURL)!
         let request = URLRequest(url : url)
         
@@ -55,14 +54,13 @@ class TodaySchoolMeal {
                 return
             }
             
-            performUIUpdatesOnMain {
-                self.MorningA = SchoolMeal(input : parsedResult[0] as! [String:AnyObject])
-                self.MorningB = SchoolMeal(input : parsedResult[1] as! [String:AnyObject])
-                self.Lunch = SchoolMeal(input : parsedResult[2] as! [String:AnyObject])
-                self.Dinner = SchoolMeal(input : parsedResult[3] as! [String:AnyObject])
-            }
-            
             print(parsedResult)
+            performUIUpdatesOnMain {
+                for item in parsedResult{
+                    let delivery = item as! [String:AnyObject]
+                    self.deliveries.append(Delivery(input : delivery))
+                }
+            }
         }
         
         // start the task!
