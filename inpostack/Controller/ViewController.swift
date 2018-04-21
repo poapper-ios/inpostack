@@ -33,6 +33,14 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewFlowLayout {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
     
 }
