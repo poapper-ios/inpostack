@@ -10,14 +10,12 @@ import UIKit
 
 class MealCardCell: UICollectionViewCell {
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
+    var meal:SchoolMeal?
     
     func setupCell() {
         layer.cornerRadius = 10.0
         layer.masksToBounds = true
+        
     }
     
 }
