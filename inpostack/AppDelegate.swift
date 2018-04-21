@@ -17,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.barTintColor = UIColor(red: 240/255, green: 69/255, blue: 82/255, alpha: 1)
+        navigationBarAppearance.tintColor = UIColor.white
+        
+        navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+                                                      NSAttributedStringKey.font: UIFont(name: "Archive", size: 25 )!]
+        
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.barTintColor = UIColor.white
+        tabBarAppearance.tintColor = UIColor(red: 240/255, green: 69/255, blue: 82/255, alpha: 1)
+        
+        
         return true
     }
 

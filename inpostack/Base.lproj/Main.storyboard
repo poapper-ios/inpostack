@@ -271,7 +271,7 @@
         <!--캠퍼스라이프-->
         <scene sceneID="GMI-QA-OQX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYR-55-pkU" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYR-55-pkU" customClass="MainNavigationController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="캠퍼스라이프" image="campus" id="tAf-59-pUC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lvj-f1-Wd9">
@@ -293,6 +293,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="g5n-dE-Gjl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CA4-9I-xXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -365,6 +366,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fAG-KU-i0s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t03-eY-wIf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
