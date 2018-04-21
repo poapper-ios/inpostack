@@ -12,8 +12,8 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.backgroundColor = UIColor(red: 240/255, green: 69/255, blue: 82/255, alpha: 1)
-        navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 150)
+        
+        navigationBar.frame.size = navigationBar.sizeThatFits(CGSize(width: self.navigationBar.frame.width, height: self.navigationBar.frame.height))
 
         // Do any additional setup after loading the view.
     }
@@ -34,4 +34,10 @@ class MainNavigationController: UINavigationController {
     }
     */
 
+}
+
+extension UINavigationBar {
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 200)
+    }
 }

@@ -65,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4C82679F208AF1B70048259A /* AppDelegate.swift */,
+				4CD36833208B442D0080E7DC /* Design Component */,
 				4CD36830208B38280080E7DC /* fonts */,
 				4CD3682F208B2FE80080E7DC /* Controller */,
 				4C8267A3208AF1B70048259A /* Main.storyboard */,
@@ -93,6 +94,13 @@
 				4CD36831208B38670080E7DC /* Archive.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		4CD36833208B442D0080E7DC /* Design Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Design Component";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
