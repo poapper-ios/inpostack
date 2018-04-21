@@ -10,12 +10,26 @@ import UIKit
 
 class MealCardCell: UICollectionViewCell {
     
-    var meal:SchoolMeal?
+    var mealType:String?
+    var menus:String = ""
+    var calory:Int?
     
-    func setupCell() {
-        layer.cornerRadius = 10.0
+    func setupCell(meal: SchoolMeal?) {
+        layer.cornerRadius = 5.0
         layer.masksToBounds = true
         
+        if(meal != nil) {
+            mealType = meal!.Name_KO
+            calory = meal!.Calory
+            menus = meal!.Menu_KO.componentsJoined(by: ", ")
+            print("menu set")
+        }
+    }
+    
+    func setBGImage(img:UIImage) {
+        let bg = UIView()
+        bg.backgroundColor = UIColor(patternImage: img)
+        backgroundView = bg
     }
     
 }

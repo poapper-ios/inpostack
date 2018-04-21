@@ -12,8 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mealCollectionView: UICollectionView?
     
+    var meals:TodaySchoolMeal?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        meals = TodaySchoolMeal()
     }
 
     override func viewDidLoad() {
@@ -37,12 +41,28 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3;
+        return 4;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = mealCollectionView?.dequeueReusableCell(withReuseIdentifier: "meal_card", for: indexPath)
+        let cell = mealCollectionView?.dequeueReusableCell(withReuseIdentifier: "meal_card", for: indexPath) as? MealCardCell
+        switch indexPath.row {
+        case 0:
+            cell!.setupCell(meal: meals!.MorningA)
+            cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
+        case 1:
+            cell!.setupCell(meal: meals!.MorningB)
+            cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
+        case 2:
+            cell!.setupCell(meal: meals!.Lunch)
+            cell!.setBGImage(img: #imageLiteral(resourceName: "lunch_bg"))
+        case 3:
+            cell!.setupCell(meal: meals!.Dinner)
+            cell!.setBGImage(img: #imageLiteral(resourceName: "dinner_bg"))
+        default: break
+        }
+        
         return cell!
     }
     
