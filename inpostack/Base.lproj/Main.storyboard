@@ -142,7 +142,7 @@
         <!--배달업체-->
         <scene sceneID="eZC-D9-2ea">
             <objects>
-                <viewController title="배달업체" id="dRj-wL-Bew" sceneMemberID="viewController">
+                <viewController title="배달업체" id="dRj-wL-Bew" customClass="DeliveryViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XR4-vW-P3U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
         <!--교내 연락망-->
         <scene sceneID="dYl-wQ-stb">
             <objects>
-                <viewController title="교내 연락망" id="AlR-3g-RDs" sceneMemberID="viewController">
+                <viewController title="교내 연락망" id="AlR-3g-RDs" customClass="ContactAddressViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQm-sD-ZyW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,7 +271,7 @@
         <!--택시-->
         <scene sceneID="nPi-xg-Jkk">
             <objects>
-                <viewController title="택시" id="hod-I9-1LW" sceneMemberID="viewController">
+                <viewController title="택시" id="hod-I9-1LW" customClass="TaxiViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vV0-cA-6e8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +295,7 @@
         <!--학식메뉴-->
         <scene sceneID="8K2-nJ-mTV">
             <objects>
-                <viewController title="학식메뉴" id="gTU-zY-3kE" sceneMemberID="viewController">
+                <viewController title="학식메뉴" id="gTU-zY-3kE" customClass="SchoolMealViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ljt-Qt-eEv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,7 +356,7 @@
         <!--교통-->
         <scene sceneID="sPm-f6-OuY">
             <objects>
-                <viewController id="aw2-Hf-3cy" sceneMemberID="viewController">
+                <viewController id="aw2-Hf-3cy" customClass="TransportViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SPA-Vu-Hqd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,7 +394,7 @@
         <!--설정-->
         <scene sceneID="rOL-Or-d6Z">
             <objects>
-                <viewController id="rXS-vF-H6s" sceneMemberID="viewController">
+                <viewController id="rXS-vF-H6s" customClass="SettingViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhR-Jk-2hx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
