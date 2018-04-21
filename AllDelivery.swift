@@ -54,7 +54,7 @@ class AllDelivery {
                 return
             }
             
-            print(parsedResult)
+            //print(parsedResult)
             performUIUpdatesOnMain {
                 for item in parsedResult{
                     let delivery = item as! [String:AnyObject]
