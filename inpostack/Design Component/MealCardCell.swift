@@ -22,7 +22,6 @@ class MealCardCell: UICollectionViewCell {
             mealType = meal!.Name_KO
             calory = meal!.Calory
             menus = meal!.Menu_KO.componentsJoined(by: ", ")
-            print("menu set")
         }
     }
     
