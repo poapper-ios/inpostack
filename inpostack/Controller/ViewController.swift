@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mealCollectionView: UICollectionView?
     
     var meals:TodaySchoolMeal?
+    var Deliver = AllDelivery()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -36,6 +37,18 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showDeliver(_ sender: AnyObject){
+        performSegue(withIdentifier: "deliver", sender: Deliver)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "deliver" {
+            let deliverScreen = segue.destination as! DeliveryViewController
+            deliverScreen.Deliver = sender as! AllDelivery
+            print("newcsh" + String(deliverScreen.Deliver.deliveries.count))
+        }
     }
 }
 

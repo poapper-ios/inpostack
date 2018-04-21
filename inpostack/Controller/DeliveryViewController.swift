@@ -27,7 +27,7 @@ class DeliveryViewController: UIViewController, UITableViewDelegate, UITableView
     var Deliver = AllDelivery()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(Deliver.deliveries.count)
+        print("csh" + String(Deliver.deliveries.count))
         return Deliver.deliveries.count
     }
     
@@ -36,6 +36,10 @@ class DeliveryViewController: UIViewController, UITableViewDelegate, UITableView
         cell.resname.text = Deliver.deliveries[indexPath.row].Name
         cell.resnum.text = Deliver.deliveries[indexPath.row].Contact
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
 
 }

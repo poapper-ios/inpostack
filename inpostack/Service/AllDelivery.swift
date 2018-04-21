@@ -9,11 +9,9 @@
 import UIKit
 
 class AllDelivery {
-    var deliveries : Array<Delivery>
+    var deliveries = Array<Delivery>()
     
     init(){
-        deliveries = Array<Delivery>()
-        
         let session = URLSession.shared
         let sendURL = Constants.Basic.APIBaseURL + Constants.Delivery.Path
         let url = URL(string : sendURL)!
@@ -60,6 +58,7 @@ class AllDelivery {
                     let delivery = item as! [String:AnyObject]
                     self.deliveries.append(Delivery(input : delivery))
                 }
+                print("hello!")
             }
         }
         
