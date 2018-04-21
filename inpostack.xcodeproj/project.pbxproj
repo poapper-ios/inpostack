@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078CCC8B208B1B850078AF3A /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC8A208B1B850078AF3A /* BusViewController.swift */; };
+		078CCC8D208B1E010078AF3A /* FacilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC8C208B1E010078AF3A /* FacilityViewController.swift */; };
 		4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82679F208AF1B70048259A /* AppDelegate.swift */; };
 		4C8267A2208AF1B70048259A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8267A1208AF1B70048259A /* ViewController.swift */; };
 		4C8267A5208AF1B70048259A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8267A3208AF1B70048259A /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		078CCC8A208B1B850078AF3A /* BusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
+		078CCC8C208B1E010078AF3A /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityViewController.swift; sourceTree = "<group>"; };
 		4C82679C208AF1B70048259A /* inpostack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inpostack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C82679F208AF1B70048259A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8267A1208AF1B70048259A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				4C82679F208AF1B70048259A /* AppDelegate.swift */,
 				4C8267A1208AF1B70048259A /* ViewController.swift */,
 				4C8267A3208AF1B70048259A /* Main.storyboard */,
+				078CCC8C208B1E010078AF3A /* FacilityViewController.swift */,
+				078CCC8A208B1B850078AF3A /* BusViewController.swift */,
 				4C8267A9208AF1B70048259A /* Assets.xcassets */,
 				4C8267AB208AF1B70048259A /* LaunchScreen.storyboard */,
 				4C8267AE208AF1B70048259A /* Info.plist */,
@@ -142,6 +148,8 @@
 				4C8267A8208AF1B70048259A /* inpostack.xcdatamodeld in Sources */,
 				4C8267A2208AF1B70048259A /* ViewController.swift in Sources */,
 				4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */,
+				078CCC8D208B1E010078AF3A /* FacilityViewController.swift in Sources */,
+				078CCC8B208B1B850078AF3A /* BusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

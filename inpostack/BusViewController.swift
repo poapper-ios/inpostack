@@ -10,9 +10,12 @@ import UIKit
 
 class BusViewController: UIViewController {
 
+    @IBOutlet weak var BusController: UISegmentedControl!
+    @IBOutlet weak var Label1: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,15 @@ class BusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func ChangeBus(_ sender: Any) {
+        if BusController.selectedSegmentIndex == 0 {
+            Label1.text = "105번 버스"
+        }
+        else if BusController.selectedSegmentIndex == 1 {
+            Label1.text = "108번 버스"
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
