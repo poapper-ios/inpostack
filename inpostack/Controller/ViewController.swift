@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         mealCollectionView!.dataSource = self
         mealCollectionView!.delegate = self
         
-        mealCollectionView!.register(MealCardCell.self, forCellWithReuseIdentifier: "meal_card")
-        
         navigationController?.navigationBar.frame.size = (navigationController?.navigationBar.sizeThatFits(CGSize()))!
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,16 +47,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = mealCollectionView?.dequeueReusableCell(withReuseIdentifier: "meal_card", for: indexPath) as? MealCardCell
         switch indexPath.row {
         case 0:
-            cell!.setupCell(meal: meals!.MorningA)
+            cell!.setupCell(meal: meals!.MorningA, title: "Breakfast - A")
             cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
         case 1:
-            cell!.setupCell(meal: meals!.MorningB)
+            cell!.setupCell(meal: meals!.MorningB, title: "Breakfast - A")
             cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
         case 2:
-            cell!.setupCell(meal: meals!.Lunch)
+            cell!.setupCell(meal: meals!.Lunch, title: "Lunch")
             cell!.setBGImage(img: #imageLiteral(resourceName: "lunch_bg"))
         case 3:
-            cell!.setupCell(meal: meals!.Dinner)
+            cell!.setupCell(meal: meals!.Dinner, title: "Dinner")
             cell!.setBGImage(img: #imageLiteral(resourceName: "dinner_bg"))
         default: break
         }

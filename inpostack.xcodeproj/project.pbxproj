@@ -15,8 +15,6 @@
 		078CCC95208B59540078AF3A /* ContactAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC94208B59540078AF3A /* ContactAddressViewController.swift */; };
 		078CCC97208B59820078AF3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC96208B59820078AF3A /* SettingViewController.swift */; };
 		078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC98208B59B80078AF3A /* TransportViewController.swift */; };
-		262C6AFC208B625F00FC99E0 /* SchoolMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C6AFB208B625F00FC99E0 /* SchoolMealCell.swift */; };
-		262C6AFE208B648800FC99E0 /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C6AFD208B648800FC99E0 /* DeliveryCell.swift */; };
 		4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82679F208AF1B70048259A /* AppDelegate.swift */; };
 		4C8267A2208AF1B70048259A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8267A1208AF1B70048259A /* ViewController.swift */; };
 		4C8267A5208AF1B70048259A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8267A3208AF1B70048259A /* Main.storyboard */; };
@@ -36,6 +34,7 @@
 		4CD3684E208B7B2E0080E7DC /* TodaySchoolMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36848208B7B2E0080E7DC /* TodaySchoolMeal.swift */; };
 		4CD36851208B7C0E0080E7DC /* SchoolMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */; };
 		4CD36852208B7C0E0080E7DC /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */; };
+		4CD36859208B82AC0080E7DC /* TmonMonsori.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD36858208B82AC0080E7DC /* TmonMonsori.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +46,6 @@
 		078CCC94208B59540078AF3A /* ContactAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressViewController.swift; sourceTree = "<group>"; };
 		078CCC96208B59820078AF3A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		078CCC98208B59B80078AF3A /* TransportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
-		262C6AFB208B625F00FC99E0 /* SchoolMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SchoolMealCell.swift; path = ../../../../../SchoolMealCell.swift; sourceTree = "<group>"; };
-		262C6AFD208B648800FC99E0 /* DeliveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeliveryCell.swift; path = ../../../../../DeliveryCell.swift; sourceTree = "<group>"; };
 		4C82679C208AF1B70048259A /* inpostack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inpostack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C82679F208AF1B70048259A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8267A1208AF1B70048259A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +67,7 @@
 		4CD36848208B7B2E0080E7DC /* TodaySchoolMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaySchoolMeal.swift; sourceTree = "<group>"; };
 		4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolMealCell.swift; path = inpostack/TableViewCell/SchoolMealCell.swift; sourceTree = SOURCE_ROOT; };
 		4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryCell.swift; path = inpostack/TableViewCell/DeliveryCell.swift; sourceTree = SOURCE_ROOT; };
+		4CD36858208B82AC0080E7DC /* TmonMonsori.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TmonMonsori.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		262C6AFA208B623600FC99E0 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				262C6AFB208B625F00FC99E0 /* SchoolMealCell.swift */,
-				262C6AFD208B648800FC99E0 /* DeliveryCell.swift */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
 		4C826793208AF1B70048259A = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD36831208B38670080E7DC /* Archive.otf */,
+				4CD36858208B82AC0080E7DC /* TmonMonsori.otf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -253,6 +243,7 @@
 			files = (
 				4CD36832208B38670080E7DC /* Archive.otf in Resources */,
 				4C8267AD208AF1B70048259A /* LaunchScreen.storyboard in Resources */,
+				4CD36859208B82AC0080E7DC /* TmonMonsori.otf in Resources */,
 				4C8267AA208AF1B70048259A /* Assets.xcassets in Resources */,
 				4C8267A5208AF1B70048259A /* Main.storyboard in Resources */,
 			);

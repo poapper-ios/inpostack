@@ -10,14 +10,19 @@ import UIKit
 
 class MealCardCell: UICollectionViewCell {
     
+    @IBOutlet var mealTitle: UILabel!
+    @IBOutlet var menuText: UILabel!
+    @IBOutlet var caloryText: UILabel!
+    
     var mealType:String?
     var menus:String = ""
     var calory:Int?
     
-    func setupCell(meal: SchoolMeal?) {
+    func setupCell(meal: SchoolMeal?, title: String?) {
         layer.cornerRadius = 5.0
         layer.masksToBounds = true
         
+        mealTitle.text = "\"" + title! + "\""
         if(meal != nil) {
             mealType = meal!.Name_KO
             calory = meal!.Calory

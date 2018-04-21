@@ -59,6 +59,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Archive.otf</string>
+		<string>TmonMonsori.otf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

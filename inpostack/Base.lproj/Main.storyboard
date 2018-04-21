@@ -7,12 +7,17 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AppleSDGothicNeo.ttc">
             <string>AppleSDGothicNeo-Bold</string>
+            <string>AppleSDGothicNeo-SemiBold</string>
+        </array>
+        <array key="TmonMonsori.otf">
+            <string>TmonMonsoriOTFBlack</string>
         </array>
     </customFonts>
     <scenes>
@@ -102,20 +107,62 @@
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ap1-jO-0hN">
                                     <size key="itemSize" width="333" height="178"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="12" height="0.0"/>
+                                    <size key="footerReferenceSize" width="12" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s3b-a1-xlm">
-                                        <rect key="frame" x="0.0" y="0.66666666666666663" width="333" height="178"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="meal_card" id="s3b-a1-xlm" customClass="MealCardCell" customModule="inpostack" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="0.66666666666666663" width="333" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Breakfast&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-Zh-Xg4">
+                                                    <rect key="frame" x="20" y="28" width="146.66666666666666" height="31.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="TmonMonsoriOTFBlack" family="TmonMonsoriOTF" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800 kCal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-KM-sKl">
+                                                    <rect key="frame" x="218" y="135" width="72" height="22"/>
+                                                    <fontDescription key="fontDescription" name="TmonMonsoriOTFBlack" family="TmonMonsoriOTF" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맛있는 거 준다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOD-gF-98n">
+                                                    <rect key="frame" x="19.999999999999993" y="78" width="97.333333333333314" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.9430052638053894" green="0.27032747864723206" blue="0.31984725594520569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="kvc-KM-sKl" secondAttribute="trailing" constant="35" id="5cv-5g-aH1"/>
+                                            <constraint firstItem="IOD-gF-98n" firstAttribute="leading" secondItem="ZEY-Zh-Xg4" secondAttribute="leading" id="6qc-gC-IiK"/>
+                                            <constraint firstItem="IOD-gF-98n" firstAttribute="top" secondItem="ZEY-Zh-Xg4" secondAttribute="bottom" constant="18.666666666666671" id="Xos-3P-nzu"/>
+                                            <constraint firstItem="ZEY-Zh-Xg4" firstAttribute="leading" secondItem="s3b-a1-xlm" secondAttribute="leadingMargin" constant="12" id="dyA-pq-gSx"/>
+                                            <constraint firstItem="ZEY-Zh-Xg4" firstAttribute="top" secondItem="s3b-a1-xlm" secondAttribute="topMargin" constant="20" id="job-J4-dF6"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="kvc-KM-sKl" secondAttribute="bottom" constant="13" id="tki-XG-ZVg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="caloryText" destination="kvc-KM-sKl" id="Rgr-zz-Syo"/>
+                                            <outlet property="mealTitle" destination="ZEY-Zh-Xg4" id="mm5-pQ-kQj"/>
+                                            <outlet property="menuText" destination="IOD-gF-98n" id="NGb-a5-WYQ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xq1-fJ-ugk">
+                                    <rect key="frame" x="0.0" y="0.0" width="12" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PMh-Kd-QOP">
+                                    <rect key="frame" x="345" y="0.0" width="12" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1325.5999999999999" y="477.21139430284859"/>
+            <point key="canvasLocation" x="1324.6376811594205" y="476.9021739130435"/>
         </scene>
         <!--Delivery-->
         <scene sceneID="eZC-D9-2ea">

@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.tintColor = UIColor.white
         
         navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                                      NSAttributedStringKey.font: UIFont(name: "Archive", size: 25 )!]
+                                                      NSAttributedStringKey.font: UIFont(name: "TmonMonsoriOTF", size: 25 )!]
         
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.barTintColor = UIColor.white
