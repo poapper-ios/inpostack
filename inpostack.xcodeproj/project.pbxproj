@@ -26,6 +26,12 @@
 		4CD3682E208B2FDB0080E7DC /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3682D208B2FDB0080E7DC /* MainNavigationController.swift */; };
 		4CD36832208B38670080E7DC /* Archive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD36831208B38670080E7DC /* Archive.otf */; };
 		4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36836208B5C4B0080E7DC /* MealCardCell.swift */; };
+		997DFC5F208B5FA30052262D /* SchoolMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC5E208B5FA30052262D /* SchoolMeal.swift */; };
+		997DFC61208B5FCB0052262D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC60208B5FCB0052262D /* Constants.swift */; };
+		997DFC63208B60900052262D /* TodaySchoolMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC62208B60900052262D /* TodaySchoolMeal.swift */; };
+		997DFC65208B610D0052262D /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC64208B610D0052262D /* GCDBlackBox.swift */; };
+		997DFC67208B61EA0052262D /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC66208B61EA0052262D /* Facility.swift */; };
+		997DFC69208B62230052262D /* AllFacility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC68208B62230052262D /* AllFacility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,12 @@
 		4CD3682D208B2FDB0080E7DC /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		4CD36831208B38670080E7DC /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
 		4CD36836208B5C4B0080E7DC /* MealCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardCell.swift; sourceTree = "<group>"; };
+		997DFC5E208B5FA30052262D /* SchoolMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolMeal.swift; sourceTree = SOURCE_ROOT; };
+		997DFC60208B5FCB0052262D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
+		997DFC62208B60900052262D /* TodaySchoolMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySchoolMeal.swift; sourceTree = SOURCE_ROOT; };
+		997DFC64208B610D0052262D /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = SOURCE_ROOT; };
+		997DFC66208B61EA0052262D /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = SOURCE_ROOT; };
+		997DFC68208B62230052262D /* AllFacility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFacility.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,10 @@
 		4CD36838208B5D6A0080E7DC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				997DFC5E208B5FA30052262D /* SchoolMeal.swift */,
+				997DFC62208B60900052262D /* TodaySchoolMeal.swift */,
+				997DFC66208B61EA0052262D /* Facility.swift */,
+				997DFC68208B62230052262D /* AllFacility.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 		4CD36839208B5D730080E7DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				997DFC60208B5FCB0052262D /* Constants.swift */,
+				997DFC64208B610D0052262D /* GCDBlackBox.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,12 +247,18 @@
 			files = (
 				078CCC91208B587B0078AF3A /* TaxiViewController.swift in Sources */,
 				078CCC97208B59820078AF3A /* SettingViewController.swift in Sources */,
+				997DFC69208B62230052262D /* AllFacility.swift in Sources */,
 				4CD3682E208B2FDB0080E7DC /* MainNavigationController.swift in Sources */,
 				078CCC8F208B58190078AF3A /* SchoolMealViewController.swift in Sources */,
 				078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */,
+				997DFC61208B5FCB0052262D /* Constants.swift in Sources */,
+				997DFC65208B610D0052262D /* GCDBlackBox.swift in Sources */,
 				4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */,
 				4C8267A8208AF1B70048259A /* inpostack.xcdatamodeld in Sources */,
+				997DFC63208B60900052262D /* TodaySchoolMeal.swift in Sources */,
 				4C8267A2208AF1B70048259A /* ViewController.swift in Sources */,
+				997DFC5F208B5FA30052262D /* SchoolMeal.swift in Sources */,
+				997DFC67208B61EA0052262D /* Facility.swift in Sources */,
 				078CCC93208B59080078AF3A /* DeliveryViewController.swift in Sources */,
 				4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */,
 				078CCC8D208B1E010078AF3A /* FacilityViewController.swift in Sources */,
