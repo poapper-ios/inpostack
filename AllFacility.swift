@@ -52,7 +52,6 @@ class AllFacility {
                 return
             }
             
-            let result = Facility(input: parsedResult[0] as! [String:AnyObject])
             print(parsedResult)
             performUIUpdatesOnMain {
                 for item in parsedResult{
