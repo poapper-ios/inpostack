@@ -27,6 +27,8 @@ class MealCardCell: UICollectionViewCell {
             mealType = meal!.Name_KO
             calory = meal!.Calory
             menus = meal!.Menu_KO.componentsJoined(by: ", ")
+            menuText.text = menus
+            caloryText.text = String(describing: calory!) + " kCal"
         }
     }
     

@@ -12,12 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mealCollectionView: UICollectionView?
     
-    var meals:TodaySchoolMeal?
+    var MorningA : SchoolMeal!
+    var MorningB : SchoolMeal!
+    var Lunch : SchoolMeal!
+    var Dinner : SchoolMeal!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        meals = TodaySchoolMeal()
     }
 
     override func viewDidLoad() {
@@ -29,6 +30,58 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.frame.size = (navigationController?.navigationBar.sizeThatFits(CGSize()))!
         
         // Do any additional setup after loading the view, typically from a nib.
+        let session = URLSession.shared
+        let sendURL = Constants.Basic.APIBaseURL + Constants.Schoolmeal.Today
+        let url = URL(string : sendURL)!
+        let request = URLRequest(url : url)
+
+        // create network request
+        let task = session.dataTask(with: request) { (data, response, error) in
+            // if an error occurs, print it and re-enable the UI
+            func displayError(_ error: String) {
+                print(error)
+                print("URL at time of error: \(url)")
+            }
+
+            /* GUARD: Was there an error? */
+            guard (error == nil) else {
+                displayError("There was an error with your request: \(error)")
+                return
+            }
+
+            /* GUARD: Did we get a successful 2XX response? */
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
+                displayError("Your request returned a status code other than 2xx!")
+                return
+            }
+
+            /* GUARD: Was there any data returned? */
+            guard let data = data else {
+                displayError("No data was returned by the request!")
+                return
+            }
+
+            // parse the data
+            let parsedResult: NSArray!
+            do {
+                parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! NSArray
+            } catch {
+                displayError("Could not parse the data as JSON: '\(data)'")
+                return
+            }
+
+            performUIUpdatesOnMain {
+                self.MorningA = SchoolMeal(input : parsedResult[0] as! [String:AnyObject])
+                self.MorningB = SchoolMeal(input : parsedResult[1] as! [String:AnyObject])
+                self.Lunch = SchoolMeal(input : parsedResult[2] as! [String:AnyObject])
+                self.Dinner = SchoolMeal(input : parsedResult[3] as! [String:AnyObject])
+            }
+            self.mealCollectionView?.reloadData()
+            print(parsedResult)
+        }
+
+        // start the task!
+        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,16 +100,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = mealCollectionView?.dequeueReusableCell(withReuseIdentifier: "meal_card", for: indexPath) as? MealCardCell
         switch indexPath.row {
         case 0:
-            cell!.setupCell(meal: meals!.MorningA, title: "Breakfast - A")
+            cell!.setupCell(meal: MorningA, title: "Breakfast - A")
             cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
         case 1:
-            cell!.setupCell(meal: meals!.MorningB, title: "Breakfast - A")
+            cell!.setupCell(meal: MorningB, title: "Breakfast - B")
             cell!.setBGImage(img: #imageLiteral(resourceName: "breakfast_bg"))
         case 2:
-            cell!.setupCell(meal: meals!.Lunch, title: "Lunch")
+            cell!.setupCell(meal: Lunch, title: "Lunch")
             cell!.setBGImage(img: #imageLiteral(resourceName: "lunch_bg"))
         case 3:
-            cell!.setupCell(meal: meals!.Dinner, title: "Dinner")
+            cell!.setupCell(meal: Dinner, title: "Dinner")
             cell!.setBGImage(img: #imageLiteral(resourceName: "dinner_bg"))
         default: break
         }
