@@ -77,7 +77,9 @@ class ViewController: UIViewController {
                 self.Lunch = SchoolMeal(input : parsedResult[2] as! [String:AnyObject])
                 self.Dinner = SchoolMeal(input : parsedResult[3] as! [String:AnyObject])
             }
-            self.mealCollectionView?.reloadData()
+            DispatchQueue.main.async {
+                self.mealCollectionView?.reloadData()
+            }
             print(parsedResult)
         }
 

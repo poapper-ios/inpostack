@@ -12,10 +12,17 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
-        navigationBar.frame.size = navigationBar.sizeThatFits(CGSize(width: self.navigationBar.frame.width, height: self.navigationBar.frame.height))
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+//        let height: CGFloat = 190 //whatever height you want to add to the existing height
+//        let bounds = self.navigationBar.bounds
+//        self.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
+        navigationBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
