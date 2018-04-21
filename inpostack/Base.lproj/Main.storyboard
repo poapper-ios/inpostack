@@ -85,7 +85,7 @@
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="복지시설"/>
                                                 <connections>
-                                                    <segue destination="g5n-dE-Gjl" kind="show" id="ZDz-TC-yAn"/>
+                                                    <action selector="showFacility:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLl-1B-BDt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -187,6 +187,7 @@
                     <connections>
                         <outlet property="mealCollectionView" destination="Twg-Te-Pcj" id="rAq-Lt-Dwc"/>
                         <segue destination="dRj-wL-Bew" kind="show" identifier="deliver" id="HoM-uc-VuS"/>
+                        <segue destination="KdB-B1-IuF" kind="show" identifier="facility" id="Wu6-He-ttN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -302,7 +303,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="uRW-fG-M1T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FacilityCell" rowHeight="90" id="uRW-fG-M1T" customClass="FacilityCell" customModule="inpostack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uRW-fG-M1T" id="deg-up-tdg">
@@ -310,14 +311,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-GO-HZi">
-                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="276" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZf-vq-1Vx">
-                                                    <rect key="frame" x="15" y="49" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="49" width="256" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -330,6 +331,10 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="facloca" destination="fZf-vq-1Vx" id="RBu-23-qIa"/>
+                                            <outlet property="facname" destination="gjP-GO-HZi" id="nP7-ZJ-Lb2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -340,6 +345,7 @@
                     <tabBarItem key="tabBarItem" title="지곡회관" id="o6K-ts-czS"/>
                     <connections>
                         <outlet property="FacilityController" destination="JXY-in-QKA" id="8n4-JC-Fg2"/>
+                        <outlet property="tableview" destination="fxA-wk-Kvl" id="Cpx-oa-jtc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wa-vM-Lkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -496,24 +502,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onr-fg-IRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="475"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="eAe-oT-ZJ3">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="g5n-dE-Gjl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CA4-9I-xXJ">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="KdB-B1-IuF" kind="relationship" relationship="viewControllers" id="R9w-8E-rYD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X8e-c0-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3270" y="477"/>
         </scene>
         <!--교통-->
         <scene sceneID="sPm-f6-OuY">

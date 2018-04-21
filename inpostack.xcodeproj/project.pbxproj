@@ -35,6 +35,7 @@
 		4CD36851208B7C0E0080E7DC /* SchoolMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */; };
 		4CD36852208B7C0E0080E7DC /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */; };
 		4CD36859208B82AC0080E7DC /* TmonMonsori.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD36858208B82AC0080E7DC /* TmonMonsori.otf */; };
+		997DFC6F208B93C70052262D /* FacilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC6E208B93C20052262D /* FacilityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolMealCell.swift; path = inpostack/TableViewCell/SchoolMealCell.swift; sourceTree = SOURCE_ROOT; };
 		4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryCell.swift; path = inpostack/TableViewCell/DeliveryCell.swift; sourceTree = SOURCE_ROOT; };
 		4CD36858208B82AC0080E7DC /* TmonMonsori.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TmonMonsori.otf; sourceTree = "<group>"; };
+		997DFC6E208B93C20052262D /* FacilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilityCell.swift; path = inpostack/TableViewCell/FacilityCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		4CD3683A208B79960080E7DC /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				997DFC6E208B93C20052262D /* FacilityCell.swift */,
 				4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */,
 				4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */,
 			);
@@ -266,6 +269,7 @@
 				078CCC8F208B58190078AF3A /* SchoolMealViewController.swift in Sources */,
 				4CD36851208B7C0E0080E7DC /* SchoolMealCell.swift in Sources */,
 				078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */,
+				997DFC6F208B93C70052262D /* FacilityCell.swift in Sources */,
 				4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */,
 				4C8267A8208AF1B70048259A /* inpostack.xcdatamodeld in Sources */,
 				4C8267A2208AF1B70048259A /* ViewController.swift in Sources */,
