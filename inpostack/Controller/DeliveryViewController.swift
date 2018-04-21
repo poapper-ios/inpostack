@@ -8,12 +8,15 @@
 
 import UIKit
 
-class DeliveryViewController: UIViewController {
-
+class DeliveryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableview.delegate = self
+        tableview.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +24,18 @@ class DeliveryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    var Deliver = AllDelivery()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(Deliver.deliveries.count)
+        return Deliver.deliveries.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "DeliveryCell", for: indexPath) as! DeliveryCell
+        cell.resname.text = Deliver.deliveries[indexPath.row].Name
+        cell.resnum.text = Deliver.deliveries[indexPath.row].Contact
+        return cell
+    }
 
 }

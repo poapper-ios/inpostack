@@ -65,7 +65,7 @@ class Delivery {
                 return
             }
             
-            print(parsedResult)
+            //print(parsedResult)
             performUIUpdatesOnMain {
                 self.Menu = parsedResult
             }
