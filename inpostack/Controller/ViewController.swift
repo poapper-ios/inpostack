@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     var meals:TodaySchoolMeal?
     var Deliver = AllDelivery()
+    var Facility = AllFacility()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -39,6 +40,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func showFacility(_ sender: AnyObject){
+        performSegue(withIdentifier: "facility", sender: Facility)
+    }
+    
     @IBAction func showDeliver(_ sender: AnyObject){
         performSegue(withIdentifier: "deliver", sender: Deliver)
     }
@@ -47,7 +52,12 @@ class ViewController: UIViewController {
         if segue.identifier == "deliver" {
             let deliverScreen = segue.destination as! DeliveryViewController
             deliverScreen.Deliver = sender as! AllDelivery
-            print("newcsh" + String(deliverScreen.Deliver.deliveries.count))
+            print(deliverScreen.Deliver.deliveries.count)
+        }
+        else if segue.identifier == "facility" {
+            let facilityScreen = segue.destination as! FacilityViewController
+            facilityScreen.faci = sender as! AllFacility
+            print(facilityScreen.faci.facilities.count)
         }
     }
 }

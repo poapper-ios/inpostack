@@ -9,7 +9,7 @@
 import UIKit
 
 class AllFacility {
-    var facilities : Array<Facility>
+    var facilities = Array<Facility>()
     
     init(){
         let session = URLSession.shared
@@ -52,7 +52,6 @@ class AllFacility {
                 return
             }
             
-            print(parsedResult)
             performUIUpdatesOnMain {
                 for item in parsedResult{
                     let facility = item as! [String:AnyObject]

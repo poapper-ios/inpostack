@@ -15,9 +15,6 @@
 		078CCC95208B59540078AF3A /* ContactAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC94208B59540078AF3A /* ContactAddressViewController.swift */; };
 		078CCC97208B59820078AF3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC96208B59820078AF3A /* SettingViewController.swift */; };
 		078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCC98208B59B80078AF3A /* TransportViewController.swift */; };
-		262C6B07208B90E900FC99E0 /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C6B05208B90E900FC99E0 /* DeliveryCell.swift */; };
-		262C6B08208B90E900FC99E0 /* SchoolMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C6B06208B90E900FC99E0 /* SchoolMealCell.swift */; };
-		262C6B0A208B910400FC99E0 /* FacilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C6B09208B910400FC99E0 /* FacilityCell.swift */; };
 		4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82679F208AF1B70048259A /* AppDelegate.swift */; };
 		4C8267A2208AF1B70048259A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8267A1208AF1B70048259A /* ViewController.swift */; };
 		4C8267A5208AF1B70048259A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8267A3208AF1B70048259A /* Main.storyboard */; };
@@ -35,6 +32,9 @@
 		4CD3684C208B7B2E0080E7DC /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36846208B7B2E0080E7DC /* Delivery.swift */; };
 		4CD3684D208B7B2E0080E7DC /* SchoolMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36847208B7B2E0080E7DC /* SchoolMeal.swift */; };
 		4CD3684E208B7B2E0080E7DC /* TodaySchoolMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36848208B7B2E0080E7DC /* TodaySchoolMeal.swift */; };
+		4CD36851208B7C0E0080E7DC /* SchoolMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */; };
+		4CD36852208B7C0E0080E7DC /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */; };
+		997DFC6F208B93C70052262D /* FacilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DFC6E208B93C20052262D /* FacilityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +46,6 @@
 		078CCC94208B59540078AF3A /* ContactAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressViewController.swift; sourceTree = "<group>"; };
 		078CCC96208B59820078AF3A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		078CCC98208B59B80078AF3A /* TransportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
-		262C6B05208B90E900FC99E0 /* DeliveryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryCell.swift; sourceTree = "<group>"; };
-		262C6B06208B90E900FC99E0 /* SchoolMealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolMealCell.swift; sourceTree = "<group>"; };
-		262C6B09208B910400FC99E0 /* FacilityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityCell.swift; sourceTree = "<group>"; };
 		4C82679C208AF1B70048259A /* inpostack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inpostack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C82679F208AF1B70048259A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8267A1208AF1B70048259A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +65,9 @@
 		4CD36846208B7B2E0080E7DC /* Delivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
 		4CD36847208B7B2E0080E7DC /* SchoolMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolMeal.swift; sourceTree = "<group>"; };
 		4CD36848208B7B2E0080E7DC /* TodaySchoolMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaySchoolMeal.swift; sourceTree = "<group>"; };
+		4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolMealCell.swift; path = inpostack/TableViewCell/SchoolMealCell.swift; sourceTree = SOURCE_ROOT; };
+		4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryCell.swift; path = inpostack/TableViewCell/DeliveryCell.swift; sourceTree = SOURCE_ROOT; };
+		997DFC6E208B93C20052262D /* FacilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilityCell.swift; path = inpostack/TableViewCell/FacilityCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,16 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		262C6B04208B90CE00FC99E0 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				262C6B05208B90E900FC99E0 /* DeliveryCell.swift */,
-				262C6B06208B90E900FC99E0 /* SchoolMealCell.swift */,
-				262C6B09208B910400FC99E0 /* FacilityCell.swift */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
 		4C826793208AF1B70048259A = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4C82679F208AF1B70048259A /* AppDelegate.swift */,
-				262C6B04208B90CE00FC99E0 /* TableViewCell */,
+				4CD3683A208B79960080E7DC /* TableViewCell */,
 				4CD36839208B5D730080E7DC /* Model */,
 				4CD36838208B5D6A0080E7DC /* Service */,
 				4CD36833208B442D0080E7DC /* Design Component */,
@@ -179,6 +169,17 @@
 				4CD3683F208B7B260080E7DC /* GCDBlackBox.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4CD3683A208B79960080E7DC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				997DFC6E208B93C20052262D /* FacilityCell.swift */,
+				4CD36850208B7C0E0080E7DC /* DeliveryCell.swift */,
+				4CD3684F208B7C0E0080E7DC /* SchoolMealCell.swift */,
+			);
+			name = TableViewCell;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,18 +263,18 @@
 				078CCC97208B59820078AF3A /* SettingViewController.swift in Sources */,
 				4CD3682E208B2FDB0080E7DC /* MainNavigationController.swift in Sources */,
 				078CCC8F208B58190078AF3A /* SchoolMealViewController.swift in Sources */,
+				4CD36851208B7C0E0080E7DC /* SchoolMealCell.swift in Sources */,
 				078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */,
+				997DFC6F208B93C70052262D /* FacilityCell.swift in Sources */,
 				4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */,
-				262C6B0A208B910400FC99E0 /* FacilityCell.swift in Sources */,
 				4C8267A8208AF1B70048259A /* inpostack.xcdatamodeld in Sources */,
 				4C8267A2208AF1B70048259A /* ViewController.swift in Sources */,
 				4CD3684D208B7B2E0080E7DC /* SchoolMeal.swift in Sources */,
 				078CCC93208B59080078AF3A /* DeliveryViewController.swift in Sources */,
+				4CD36852208B7C0E0080E7DC /* DeliveryCell.swift in Sources */,
 				4CD36849208B7B2E0080E7DC /* AllDelivery.swift in Sources */,
 				4CD3684E208B7B2E0080E7DC /* TodaySchoolMeal.swift in Sources */,
-				262C6B08208B90E900FC99E0 /* SchoolMealCell.swift in Sources */,
 				4C8267A0208AF1B70048259A /* AppDelegate.swift in Sources */,
-				262C6B07208B90E900FC99E0 /* DeliveryCell.swift in Sources */,
 				078CCC8D208B1E010078AF3A /* FacilityViewController.swift in Sources */,
 				078CCC95208B59540078AF3A /* ContactAddressViewController.swift in Sources */,
 				4CD3684C208B7B2E0080E7DC /* Delivery.swift in Sources */,
