@@ -8,10 +8,12 @@
 
 import UIKit
 
-class FacilityViewController: UIViewController {
+class FacilityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var Label1: UILabel!
     @IBOutlet weak var FacilityController: UISegmentedControl!
+    
+    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,23 @@ class FacilityViewController: UIViewController {
         else if FacilityController.selectedSegmentIndex == 2 {
             Label1.text = "기타"
         }
+    }
+    
+    var faci = AllFacility()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return faci.facilities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "FacilityCell", for: indexPath) as! FacilityCell
+        cell.facname.text = faci.facilities[indexPath.row].Name
+        cell.facloca.text = faci.facilities[indexPath.row].Location
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
     
     /*
