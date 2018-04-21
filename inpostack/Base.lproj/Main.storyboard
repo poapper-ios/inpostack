@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="1325.5999999999999" y="477.21139430284859"/>
         </scene>
-        <!--배달업체-->
+        <!--Delivery-->
         <scene sceneID="eZC-D9-2ea">
             <objects>
-                <viewController title="배달업체" id="dRj-wL-Bew" customClass="DeliveryViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="배달업체" id="dRj-wL-Bew" userLabel="Delivery" customClass="DeliveryViewController" customModule="inpostack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XR4-vW-P3U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
