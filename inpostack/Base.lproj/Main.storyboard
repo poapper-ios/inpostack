@@ -134,6 +134,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="캠퍼스라이프" id="Dr1-Rr-lzO"/>
                     <navigationItem key="navigationItem" title="Inpostack" largeTitleDisplayMode="always" id="C5n-vg-tdO"/>
+                    <connections>
+                        <outlet property="mealCollectionView" destination="Twg-Te-Pcj" id="rAq-Lt-Dwc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

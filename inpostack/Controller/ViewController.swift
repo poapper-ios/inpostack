@@ -9,9 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var mealCollectionView: UICollectionView?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mealCollectionView!.dataSource = self
+        mealCollectionView!.delegate = self
         
         navigationController?.navigationBar.frame.size = (navigationController?.navigationBar.sizeThatFits(CGSize()))!
         
@@ -22,6 +31,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewFlowLayout {
+    
 }

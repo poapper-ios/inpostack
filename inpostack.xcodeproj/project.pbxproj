@@ -23,6 +23,7 @@
 		4C8267AD208AF1B70048259A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8267AB208AF1B70048259A /* LaunchScreen.storyboard */; };
 		4CD3682E208B2FDB0080E7DC /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3682D208B2FDB0080E7DC /* MainNavigationController.swift */; };
 		4CD36832208B38670080E7DC /* Archive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD36831208B38670080E7DC /* Archive.otf */; };
+		4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD36836208B5C4B0080E7DC /* MealCardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4C8267AE208AF1B70048259A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD3682D208B2FDB0080E7DC /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		4CD36831208B38670080E7DC /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
+		4CD36836208B5C4B0080E7DC /* MealCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				4C82679F208AF1B70048259A /* AppDelegate.swift */,
+				4CD36839208B5D730080E7DC /* Model */,
+				4CD36838208B5D6A0080E7DC /* Service */,
 				4CD36833208B442D0080E7DC /* Design Component */,
 				4CD36830208B38280080E7DC /* fonts */,
 				4CD3682F208B2FE80080E7DC /* Controller */,
@@ -117,8 +121,23 @@
 		4CD36833208B442D0080E7DC /* Design Component */ = {
 			isa = PBXGroup;
 			children = (
+				4CD36836208B5C4B0080E7DC /* MealCardCell.swift */,
 			);
 			path = "Design Component";
+			sourceTree = "<group>";
+		};
+		4CD36838208B5D6A0080E7DC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4CD36839208B5D730080E7DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 				4CD3682E208B2FDB0080E7DC /* MainNavigationController.swift in Sources */,
 				078CCC8F208B58190078AF3A /* SchoolMealViewController.swift in Sources */,
 				078CCC99208B59B80078AF3A /* TransportViewController.swift in Sources */,
+				4CD36837208B5C4B0080E7DC /* MealCardCell.swift in Sources */,
 				4C8267A8208AF1B70048259A /* inpostack.xcdatamodeld in Sources */,
 				4C8267A2208AF1B70048259A /* ViewController.swift in Sources */,
 				078CCC93208B59080078AF3A /* DeliveryViewController.swift in Sources */,
