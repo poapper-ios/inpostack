@@ -12,7 +12,7 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.heightAnchor.constraint(equalToConstant: 120).isActive = true
+//        navigationBar.heightAnchor.constraint(equalToConstant: 86).isActive = true
         
 
         // Do any additional setup after loading the view.
@@ -22,7 +22,8 @@ class MainNavigationController: UINavigationController {
 //        let height: CGFloat = 190 //whatever height you want to add to the existing height
 //        let bounds = self.navigationBar.bounds
 //        self.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
-        navigationBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//        navigationBar.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//        navigationBar.prefersLargeTitles = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,9 +43,10 @@ class MainNavigationController: UINavigationController {
     */
 
 }
+//
+//extension UINavigationBar {
+//    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+//        return CGSize(width: UIScreen.main.bounds.width, height: 100)
+//    }
+//}
 
-extension UINavigationBar {
-    open override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 200)
-    }
-}

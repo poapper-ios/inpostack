@@ -29,8 +29,6 @@ class ViewController: UIViewController {
         mealCollectionView!.dataSource = self
         mealCollectionView!.delegate = self
         
-        navigationController?.navigationBar.frame.size = (navigationController?.navigationBar.sizeThatFits(CGSize()))!
-        
         // Do any additional setup after loading the view, typically from a nib.
         let session = URLSession.shared
         let sendURL = Constants.Basic.APIBaseURL + Constants.Schoolmeal.Today
