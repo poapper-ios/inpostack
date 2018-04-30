@@ -29,6 +29,12 @@ class ViewController: UIViewController {
         mealCollectionView!.dataSource = self
         mealCollectionView!.delegate = self
         
+        if let flowlayout = mealCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowlayout.minimumLineSpacing = 40;
+        }
+        
+        mealCollectionView?.isPagingEnabled = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         let session = URLSession.shared
         let sendURL = Constants.Basic.APIBaseURL + Constants.Schoolmeal.Today
@@ -113,7 +119,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4;
     }
@@ -138,6 +144,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: mealCollectionView!.frame.width - 40, height: mealCollectionView!.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return UIEdgeInsetsMake(0, 20, 0, 20)
     }
     
     
